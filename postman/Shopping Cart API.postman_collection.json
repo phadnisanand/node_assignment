@@ -1,0 +1,369 @@
+{
+	"info": {
+		"_postman_id": "3dab2b57-d24d-4362-a6f5-1a526cd3a2c5",
+		"name": "Shopping Cart API",
+		"description": "Postman collection for Shopping Cart API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "2861613"
+	},
+	"item": [
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt_token}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "productName",
+							"value": "Test Product",
+							"type": "text"
+						},
+						{
+							"key": "productExpiryDate",
+							"value": "2026-12-31T00:00:00.000Z",
+							"type": "text"
+						},
+						{
+							"key": "totalProductQuantity",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "Active",
+							"type": "text"
+						},
+						{
+							"key": "productImage",
+							"value": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": "{{base_url}}/api/products"
+			},
+			"response": []
+		},
+		{
+			"name": "signup_user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt_token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "phadnisanandhyd@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Chor4321",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/api/auth/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "login_user_token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt_token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "phadnisanandhyd@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Chor4321",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/api/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt_token}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "productName",
+							"value": "Updated Product Name",
+							"type": "text"
+						},
+						{
+							"key": "totalProductQuantity",
+							"value": "200",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "Inactive",
+							"type": "text"
+						},
+						{
+							"key": "productImage",
+							"value": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": "{{base_url}}/api/products/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt_token}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "createdDateSort",
+							"value": "desc",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "Active",
+							"type": "text"
+						},
+						{
+							"key": "search",
+							"value": "Test",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/api/products/search"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product By ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt_token}}",
+						"type": "text"
+					}
+				],
+				"url": "{{base_url}}/api/products/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt_token}}",
+						"type": "text"
+					}
+				],
+				"url": "{{base_url}}/api/products/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt_token}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"productId\":1,\"quantity\":1}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/api/products/purchase"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product Quantity",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt_token}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"productId\":1,\"quantity\":50}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/api/products/quantity"
+			},
+			"response": []
+		},
+		{
+			"name": "Share Product Photo via Email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwt_token}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"productId\":1,\"email\":\"phadnisanandhyd@gmail.com\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/api/products/share-photo"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "jwt_token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ1NDc0NTQ0NzUwZmNmY2RkYTFiNWQiLCJlbWFpbCI6InBoYWRuaXNhbmFuZGh5ZEBnbWFpbC5jb20iLCJpYXQiOjE3NDkzNzA3NTAsImV4cCI6MTc0OTM3NDM1MH0.VDsAg4OpeZC4Q_0tff3AmOZcZE8QQtBuJkqpZj3P1UU",
+			"type": "string"
+		}
+	]
+}

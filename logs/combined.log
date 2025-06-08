@@ -1,0 +1,17 @@
+{"level":"info","message":"::1 - - [08/Jun/2025:07:23:53 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36\"","timestamp":"2025-06-08T07:23:53.636Z"}
+{"level":"info","message":"::1 - - [08/Jun/2025:07:26:47 +0000] \"POST /api/products HTTP/1.1\" 401 32 \"-\" \"PostmanRuntime/7.43.4\"","timestamp":"2025-06-08T07:26:47.055Z"}
+{"level":"error","timestamp":"2025-06-08T08:20:45.827Z"}
+{"level":"error","timestamp":"2025-06-08T08:22:09.861Z"}
+{"level":"error","timestamp":"2025-06-08T08:23:33.368Z"}
+{"level":"error","timestamp":"2025-06-08T08:24:27.841Z"}
+{"code":"EAUTH","command":"AUTH PLAIN","level":"error","response":"534-5.7.9 Application-specific password required. For more information, go to\n534 5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor d2e1a72fcca58-7482af7aa6esm3878371b3a.59 - gsmtp","responseCode":534,"timestamp":"2025-06-08T08:27:04.844Z"}
+{"code":"EAUTH","command":"AUTH PLAIN","level":"error","response":"535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-7482b0f2e77sm3854687b3a.176 - gsmtp","responseCode":535,"timestamp":"2025-06-08T08:30:37.316Z"}
+{"level":"error","timestamp":"2025-06-08T08:35:11.771Z"}
+{"level":"error","timestamp":"2025-06-08T08:35:35.091Z"}
+{"level":"error","timestamp":"2025-06-08T08:35:47.872Z"}
+{"level":"error","timestamp":"2025-06-08T08:40:11.185Z"}
+{"level":"error","timestamp":"2025-06-08T08:41:35.867Z"}
+{"level":"error","timestamp":"2025-06-08T08:43:32.658Z"}
+{"level":"error","timestamp":"2025-06-08T08:44:30.917Z"}
+{"level":"error","timestamp":"2025-06-08T08:44:42.796Z"}
+{"level":"error","timestamp":"2025-06-08T08:44:50.595Z"}
